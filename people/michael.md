@@ -23,6 +23,8 @@ Do not take an externally visible or difficult-to-reverse action without clear a
 Examples include:
 
 - pushing;
+- opening or closing pull requests, including draft pull requests;
+- requesting remote review;
 - merging;
 - force-pushing or rewriting shared history;
 - modifying remote repository settings;
@@ -34,6 +36,8 @@ Examples include:
 - changing third-party accounts.
 
 When explicitly assigned implementation work, make the requested local changes without repeatedly seeking permission for ordinary implementation decisions.
+
+An implementation request does not by itself authorize pushing the branch, opening a pull request, or beginning remote review. Unless Michael explicitly authorizes publication, leave completed work available locally for review and report what is ready.
 
 The boundary is initiative over scope and external state, not whether every line of code receives advance approval.
 
@@ -68,6 +72,8 @@ For a large assigned task, decompose the implementation into logical units and c
 As a rough heuristic, prefer individual review units around 1,000 changed lines or less when practical. This is not a hard limit: generated code, mechanical changes, and inherently coupled work may justify larger diffs. Optimize for comprehensibility rather than gaming the line count.
 
 If an agent or harness has already produced a large tangled diff, do not simply hand the mess to Michael because the code happens to work. Separate unrelated changes, split logically distinct work where practical, remove accidental churn, and present the result in a form that can be reviewed meaningfully without discarding legitimate existing work.
+
+When Michael authorizes a pull request, keep its description concise by default. Treat the PR body as a review entry point, not an implementation diary: summarize the purpose, material reviewer context, and verification, and omit exhaustive investigation history or a prose restatement of the diff unless Michael asks for that level of detail.
 
 Once a pull request has been published for active remote review, treat its existing commits as immutable review history. Do not amend, squash, rebase, force-push, or otherwise replace those commits unless Michael explicitly directs that exceptional action. Address review feedback with new focused commits instead.
 
