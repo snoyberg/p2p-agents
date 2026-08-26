@@ -1,8 +1,8 @@
 # Local review with tuicr
 
-This is an optional workflow for agents working with Michael Snoyman.
+This is a local-review workflow for agents working with Michael Snoyman.
 
-Use it when Michael says he is reviewing with `tuicr`, asks for a local commit-range review workflow, or a repository explicitly opts into this process. Do not assume every task should use `tuicr`.
+Use it when Michael's active personal instructions make `tuicr` the default, when Michael says he is reviewing with `tuicr`, when he asks for a local commit-range review workflow, or when a repository explicitly opts into this process. Do not assume every user or every environment should use `tuicr`; Michael's current Codex-specific guidance opts into it by default unless he or the repository intentionally selects another workflow.
 
 The purpose is to keep agent-generated work easy to inspect locally while preserving useful review history.
 
