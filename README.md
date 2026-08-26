@@ -38,6 +38,10 @@ Agents can help notice recurring problems and propose improvements. Humans remai
 
 See `philosophy/peer-to-peer.md`.
 
+## Active experiments
+
+Some ideas are worth testing before they become recommendations. See [shared-agent coordination](experiments/shared-agent-coordination.md) for an active proof of concept in which separately personalized human–AI relationships exchange narrowly scoped workflow lessons through a shared asynchronous artifact.
+
 ## Feedback and derivatives
 
 Pull requests and issues are welcome.
