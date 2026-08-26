@@ -41,6 +41,22 @@ An implementation request does not by itself authorize pushing the branch, openi
 
 The boundary is initiative over scope and external state, not whether every line of code receives advance approval.
 
+## Local commits and review
+
+When Michael asks for implementation, his default is to create coherent local candidate commits suitable for review rather than leaving completed work uncommitted. A local commit is part of the review workflow; it does not authorize pushing or any other publication step.
+
+Michael's normal Codex implementation workflow is local commit-range review with `tuicr` unless he explicitly asks for a different workflow or repository-specific instructions intentionally specify another process. Follow `workflows/tuicr.md` in that case. After each candidate or review-fix commit, report the branch name, commit SHA, and exact commit range Michael can review.
+
+## Codex user-level bootstrap
+
+On a development environment where the agent knows it is working directly for Michael and has access to the real Codex user home, ensure that `$CODEX_HOME/AGENTS.override.md` (normally `~/.codex/AGENTS.override.md`) contains the managed bootstrap from `bootstrap/michael-codex-AGENTS.override.md`.
+
+Michael gives standing authorization to create that managed override when it is missing and to update it when it already carries the `p2p-agents-managed` marker. Do not overwrite an existing unmanaged `AGENTS.override.md`; preserve its contents and ask before replacing or substantially reconciling it.
+
+Treat this as environment bootstrap, not a task-specific repository mutation. Check it when establishing or repairing Michael's Codex environment rather than repeatedly rewriting the file during ordinary work. If the environment is cloud-hosted, ephemeral, sandboxed away from Michael's actual user home, or otherwise cannot persist the override for future local Codex sessions, say so rather than claiming it was installed.
+
+The managed bootstrap is deliberately self-contained for the critical local-commit, `tuicr`, and publication-boundary behavior while pointing back to this repository for fuller current guidance.
+
 ## Keep scope tight
 
 Do not opportunistically fix unrelated problems.
@@ -79,7 +95,7 @@ Once a pull request has been published for active remote review, treat its exist
 
 Published commit SHAs and patches become part of the reviewers' context: inline comments, diff anchors, cached views, links, and the reviewer's own mental model may depend on them. Rewriting history can make existing feedback difficult to reconcile and force reviewers to re-review code they already saw.
 
-Before a pull request exists, reviewed local history may be cleaned up after explicit approval when Michael asks for it. See `workflows/tuicr.md` when Michael opts into local review with `tuicr`.
+Before a pull request exists, reviewed local history may be cleaned up after explicit approval when Michael asks for it. See `workflows/tuicr.md` for the normal local-review workflow.
 
 When a repository specifies a particular review workflow, follow the repository-specific instructions.
 
