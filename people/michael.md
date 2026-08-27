@@ -79,7 +79,7 @@ Once a pull request has been published for active remote review, treat its exist
 
 Published commit SHAs and patches become part of the reviewers' context: inline comments, diff anchors, cached views, links, and the reviewer's own mental model may depend on them. Rewriting history can make existing feedback difficult to reconcile and force reviewers to re-review code they already saw.
 
-Before a pull request exists, reviewed local history may be cleaned up after explicit approval when Michael asks for it. See `workflows/tuicr.md` when Michael opts into local review with `tuicr`.
+Before a pull request exists, explicit approval in Michael's `tuicr` workflow authorizes automatically cleaning up the reviewed local history and renaming the branch to reflect its human-reviewed state. This does not authorize pushing or opening a pull request. See `workflows/tuicr.md` when Michael opts into local review with `tuicr`.
 
 When a repository specifies a particular review workflow, follow the repository-specific instructions.
 

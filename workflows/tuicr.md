@@ -31,9 +31,14 @@ Wait for explicit approval of the candidate.
 
 Local review history is provisional.
 
-After Michael explicitly approves the candidate, history may be cleaned up when he asks for it. For example, the candidate and its review-fix commits may be squashed into one clean commit before publication.
+After Michael explicitly approves the candidate, automatically finalize the reviewed local work before offering publication:
 
-Do not rewrite reviewed local history merely because a cleaner commit would look nicer. Approval and authorization to rewrite are separate decisions.
+- squash the candidate and its review-fix commits into one clean commit when there is more than one;
+- rename an `agent/` branch to a descriptive name without that prefix;
+- report the finalized branch and commit;
+- offer to push the branch and open a pull request.
+
+Approval authorizes this local finalization because it completes the review workflow and makes the branch's name reflect its human-reviewed state. It does not authorize publication: wait for Michael to explicitly authorize the push and pull request.
 
 ## After a pull request exists
 
