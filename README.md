@@ -12,6 +12,8 @@ If a human gave you a link to this repository and said that Michael is helping t
 
 Do not assume that Michael's preferences are automatically the other person's preferences. Help the person establish their own working style, level of autonomy, review expectations, tooling, and persistent agent instructions.
 
+Multi-step, task-specific procedures live under `skills/` and should be loaded only when their descriptions match the work. The `workflows/` directory may retain human-facing explanations or compatibility pointers, but must not duplicate a skill's canonical behavioral instructions.
+
 ## If you are a human
 
 You do not need to understand this repository before using it.

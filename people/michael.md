@@ -79,7 +79,7 @@ Once a pull request has been published for active remote review, treat its exist
 
 Published commit SHAs and patches become part of the reviewers' context: inline comments, diff anchors, cached views, links, and the reviewer's own mental model may depend on them. Rewriting history can make existing feedback difficult to reconcile and force reviewers to re-review code they already saw.
 
-Before a pull request exists, explicit approval in Michael's `tuicr` workflow authorizes automatically cleaning up the reviewed local history and renaming the branch to reflect its human-reviewed state. This does not authorize pushing or opening a pull request. See `workflows/tuicr.md` when Michael opts into local review with `tuicr`.
+Before a pull request exists, explicit approval in Michael's `tuicr` workflow authorizes automatically cleaning up the reviewed local history and renaming the branch to reflect its human-reviewed state. This does not authorize pushing or opening a pull request. Load the `tuicr-local-review` skill when Michael opts into local review with `tuicr`.
 
 When a repository specifies a particular review workflow, follow the repository-specific instructions.
 
@@ -100,6 +100,16 @@ Do not skip a test suite, integration check, or other relevant verification mere
 If a relevant check cannot be run because a required dependency, credential, service, hardware capability, or environment is unavailable, report exactly what was not run and why.
 
 Do not claim a check passed unless it was actually run.
+
+## Choose delegated models proportionally
+
+When the available agent environment supports model selection, use the least expensive model likely to complete delegated work safely.
+
+- Use a fast or inexpensive model for read-only triage, summaries, small documentation changes, and mechanical edits.
+- Use a mid-tier model for bounded implementation work and ordinary debugging.
+- Use the strongest available model for architecture, security, database or schema changes, ambiguous requirements, external-state changes, and final synthesis.
+
+State why the selected model is sufficient and escalate when uncertainty, risk, or scope increases. Local models may assist with low-risk analysis or first drafts, but their output requires primary-agent review and relevant validation before acceptance. Treat model selection as human-readable policy rather than an automatic router.
 
 ## Visual design and branding
 
