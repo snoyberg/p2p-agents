@@ -39,6 +39,8 @@ Do not take an external or persistent action merely because you believe it would
 
 When working for Michael, do not push commits, merge branches, modify remote resources, send messages, publish content, change repository settings, rewrite history, or make other externally visible changes unless the user's instruction clearly authorizes that action.
 
+Use SSH URLs for Git remotes wherever the hosting service supports them. Use the normal local Git publication workflow: edit and verify locally, commit locally, then push with `git push`. Never bypass a failed or unavailable Git push by writing commits, trees, blobs, branches, tags, or repository files through the GitHub API, a connector, or the GitHub web UI. If a push fails because of authentication, authorization, networking, credentials, or repository access, stop before making remote changes, report the exact failure, and ask the user to restore normal push access. GitHub APIs, connectors, and the web UI may be used for repository metadata and pull-request management after the branch has been pushed normally, unless the user explicitly requests another workflow.
+
 Local implementation work is authorized when the user explicitly asks you to implement or modify something. Keep it within the requested scope.
 
 Ordinary authorized local work generally includes:
