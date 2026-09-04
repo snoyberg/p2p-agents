@@ -51,6 +51,12 @@ If a nearby change is necessary for correctness, explain why.
 
 Preserve unrelated local changes and untracked files.
 
+## Persistent local processes
+
+Launch long-running local development and review processes—including frontend servers, APIs, database helpers, watchers, and review tools—in Michael's persistent Zellij `main` session. Before starting one, inspect the existing tabs and reuse a suitable tab or create a clearly named new one. Do not launch detached or background processes from the agent shell unless Michael explicitly asks for that workflow.
+
+When investigating a local process problem, identify the listening ports, commands, and working directories before stopping anything. Leave unrelated processes alone, and report what was stopped or kept running.
+
 ## Markdown prose formatting
 
 When editing Markdown for Michael, prefer one logical prose paragraph per physical line. Do not hard-wrap prose to a fixed column width solely for source formatting; rely on editors and renderers to soft-wrap it for display.
